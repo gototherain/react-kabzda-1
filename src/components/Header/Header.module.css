@@ -1,0 +1,10 @@
+.header {
+  grid-area: header;
+  background: #fdc00f;
+  padding: 20px 0;
+}
+
+.header img {
+  max-width: 75px;
+  max-height: 100%;
+}
