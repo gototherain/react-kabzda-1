@@ -1,0 +1,33 @@
+@import "../App/vars";
+
+.nav {
+  grid-area: nav;
+  background: #fff;
+  padding: 20px;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      list-style: none;
+
+      .item { 
+        color: $secondaryColor;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+
+      .item.active {
+        color: $primaryColor;
+      }
+    }
+  }
+}

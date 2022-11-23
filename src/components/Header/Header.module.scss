@@ -1,0 +1,24 @@
+@import '../App/vars';
+
+.header {
+  grid-area: header;
+  background: $primaryBg;
+  box-shadow: $boxShadow;
+  padding:20px 0;
+  position: relative;
+
+    .container {
+    @include container;
+    position: relative;
+    height: 100%;
+    display: flex; 
+    flex-direction: row;
+
+
+    img { 
+      align-self: center;
+      max-width: 50px;
+  }
+
+}
+}

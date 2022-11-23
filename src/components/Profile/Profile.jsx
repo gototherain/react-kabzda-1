@@ -1,10 +1,10 @@
-import s from './Profile.module.css';
+import s from './Profile.module.scss';
 import topImage from './img/top-image.jpg';
 import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <section>
             <div>
                 <img src={topImage} alt="" />
             </div>
@@ -12,7 +12,7 @@ const Profile = () => {
                 ava & description
             </div>
             <MyPosts />
-        </div>
+        </section>
     );
 }
 

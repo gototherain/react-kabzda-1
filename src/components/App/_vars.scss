@@ -1,0 +1,14 @@
+$primaryColor: #adb5bd;
+$secondaryColor: #1e74fd;
+$primaryBg: #fff;
+$secondaryBg: #fbfcfe;
+$boxShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$borderRadius: 15px;
+
+@mixin container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}

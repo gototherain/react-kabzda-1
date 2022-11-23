@@ -1,4 +1,4 @@
-import s from './Post.module.css';
+import s from './Post.module.scss';
 import userPic from './img/userpic.png'
 
 const Post = (props) => {

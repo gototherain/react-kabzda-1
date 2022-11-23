@@ -1,0 +1,59 @@
+@import "../App/vars";
+
+.dialogs {
+    display: grid;
+    grid-template-areas:
+        "dialogsItems"
+        "messages";
+    gap: 40px;
+    min-height: 100%;
+
+    .dialogsItemsWrapper {
+        grid-area: dialogsItems;
+        background: $primaryBg;
+        border-radius: $borderRadius;
+        padding: 20px;
+
+        ul {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+
+            .dialog {
+                position: relative;
+                padding: 0 0 0 20px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background: $secondaryColor;
+                    border-radius: 4px;
+                    top: 8px; 
+                    left: 0;
+                }
+            }
+
+        }
+    }
+
+    .messages {
+        grid-area: messages;
+    }
+}
+
+.message {}
+
+@media (min-width: 900px) {
+    .dialogs {
+        grid-template-areas: "dialogsItems messages";
+        grid-template-columns: 3fr 9fr;
+
+        .dialogsItemsWrapper {
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+}
