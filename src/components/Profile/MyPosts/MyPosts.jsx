@@ -5,11 +5,15 @@ const MyPosts = () => {
 
     return (
 
-        <section>
+        <section className={s.myPosts}>
             <h3>My Posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add Post</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add Post</button>
+                </div>
             </div>
 
             <div className={s.posts}>
