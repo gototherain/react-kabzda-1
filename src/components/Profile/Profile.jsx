@@ -1,16 +1,11 @@
 import s from './Profile.module.scss';
-import topImage from './img/top-image.jpg';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
     return (
-        <section>
-            <div>
-                <img src={topImage} alt="" />
-            </div>
-            <div>
-                ava & description
-            </div>
+        <section className={s.profile}>
+            <ProfileInfo />
             <MyPosts />
         </section>
     );

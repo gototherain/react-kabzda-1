@@ -5,8 +5,8 @@ const MyPosts = () => {
 
     return (
 
-        <div>
-            My Posts
+        <section>
+            <h3>My Posts</h3>
             <div>
                 <textarea></textarea>
                 <button>Add Post</button>
@@ -17,7 +17,7 @@ const MyPosts = () => {
                 <Post message="Buenos Aires!" likeCount="0" />
                 <Post message="Valar Morghulis" likeCount="10" />
             </div>
-        </div>
+        </section>
 
 
 

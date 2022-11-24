@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fbfcfe;
+  color: #adb5bd;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 100%;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas: "header" "layout";
+  grid-template-rows: 120px 1fr;
+  grid-gap: 40px;
+}
+.app-wrapper .app-wrapper-layout {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  grid-area: layout;
+  display: grid;
+  grid-template-areas: "nav" "content";
+  gap: 40px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .app-wrapper .app-wrapper-layout {
+    grid-template-areas: "nav content";
+    grid-template-columns: 3fr 9fr;
+    max-width: 1300px;
+  }
+}/*# sourceMappingURL=App.css.map */

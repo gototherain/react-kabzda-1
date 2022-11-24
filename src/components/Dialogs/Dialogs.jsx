@@ -1,31 +1,38 @@
 import { NavLink } from 'react-router-dom';
 import s from './Dialogs.module.scss';
 
+const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id;
+    return (
+        <li class={s.dialog}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </li>
+    );
+}
+
+const Message =(props) => {
+    return (
+        <div className={s.message}>{props.message}</div>
+    );
+}
+
 const Dialogs = (props) => {
     return (
         <section className={s.dialogs}>
 
             <div class={s.dialogsItemsWrapper}>
                 <ul className={s.dialogsItems}>
-                    <li class={s.dialog}>
-                        <NavLink to="/dialogs/1">Dick</NavLink>
-                    </li>
-                    <li class={s.dialog}>
-                        <NavLink to="/dialogs/2">Rick</NavLink>
-                    </li>
-                    <li class={s.dialog}>
-                        <NavLink to="/dialogs/3">Sick</NavLink>
-                    </li>
-                    <li class={s.dialog}>
-                        <NavLink to="/dialogs/4">Wick</NavLink>
-                    </li>
+                    <DialogItem name="Dick" id="1" />
+                    <DialogItem name="Rick" id="2" />
+                    <DialogItem name="Sick" id="3" />
+                    <DialogItem name="Wick" id="4" />
                 </ul>
             </div>
 
             <div className={s.messages}>
-                <div className={s.message}>So lock me and sock me up and throw away the key</div>
-                <div className={s.message}>Go fuck yourself, you whoreson</div>
-                <div className={s.message}>'Cause you're through fuckin' with me</div>
+                <Message message="So lock me and sock me up and throw away the key" />
+                <Message message="Go fuck yourself, you whoreson" />
+                <Message message="Cause you're through fuckin' with me" />
             </div>
         </section>
     );
