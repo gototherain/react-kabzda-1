@@ -1,7 +1,12 @@
 import s from './MyPosts.module.scss';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+
+
+    let postsElements = props.postsData
+    .map (p => <Post message={p.message} likeCount={p.likesCount} />);
 
     return (
 
@@ -17,9 +22,7 @@ const MyPosts = () => {
             </div>
 
             <div className={s.posts}>
-                <Post message="Buenos dias!" likeCount="20" />
-                <Post message="Buenos Aires!" likeCount="0" />
-                <Post message="Valar Morghulis" likeCount="10" />
+                {postsElements}
             </div>
         </section>
 
