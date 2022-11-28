@@ -6,15 +6,19 @@
   padding: 20px;
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     li {
       list-style: none;
 
-      .item { 
+      .item {
         color: $secondaryColor;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -28,6 +32,22 @@
       .item.active {
         color: $primaryColor;
       }
+    }
+  }
+
+  .friends {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h3 {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .items {
+      display: flex;
+      gap: 20px;
     }
   }
 }

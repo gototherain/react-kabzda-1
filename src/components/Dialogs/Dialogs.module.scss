@@ -40,10 +40,28 @@
 
     .messages {
         grid-area: messages;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        .message {
+            padding: 10px;
+            background: $primaryBg;
+            border-radius: 5px 5px 5px 0;
+            align-self: flex-start;
+
+        }
+
+        .message.my {
+            background: $blueBg;
+            color: $whiteColor;
+            border-radius: 5px 5px 0 5px;
+            align-self: flex-end;
+        }
+        
     }
 }
 
-.message {}
 
 @media (min-width: 900px) {
     .dialogs {

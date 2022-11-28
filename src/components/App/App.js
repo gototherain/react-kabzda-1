@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Dialogs from '../Dialogs/Dialogs';
 import Header from '../Header/Header';
@@ -12,16 +12,16 @@ import Settings from '../Settings/Settings';
 
 const App = (props) => {
   return (
-    <BrowserRouter>
+    
       <section className="app-wrapper">
         <Header />
         <section className="app-wrapper-layout">
 
-          <Navbar />
+          <Navbar state={props.state.sidebar} />
           <section className="app-wrapper-content">
             <Routes>
-              <Route path='/profile' element={<Profile postsData={props.postsData} />} />
-              <Route path='/dialogs/*' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+              <Route path='/profile' element={<Profile state={props.state.profilePage} />} />
+              <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />} />
               <Route path='/news' element={<News />} />
               <Route path='/music' element={<Music />} />
               <Route path='/settings' element={<Settings />} />
@@ -30,7 +30,6 @@ const App = (props) => {
         </section>
 
       </section>
-    </BrowserRouter>
 
   );
 }
